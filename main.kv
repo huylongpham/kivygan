@@ -1,0 +1,336 @@
+Mainscreenmanager:
+    id: screen_manager
+    Screen:
+        name: 'main'
+        canvas:
+            Color:
+                rgb: 44/255, 53/255, 99/255
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Date'
+                id: ngay
+                pos_hint: {'top':1}
+                size_hint: 1, 0.1
+            BoxLayout:
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint: 0.1, 1
+                    Button:
+                        text: 'DB'
+                    Button:
+                        text: 'G1'
+                    Button:
+                        text: 'G2'
+                    Button:
+                        text: 'G3'
+                    Button:
+                        text: 'G3'
+                    Button:
+                        text: 'G4'
+                    Button:
+                        text: 'G5'
+                    Button:
+                        text: 'G5'
+                    Button:
+                        text: 'G6'
+                    Button:
+                        text: 'G7'
+                BoxLayout:
+                    orientation: 'vertical'
+                    text: 'result'
+                    BoxLayout:
+                        Button:
+                            text: 'DB'
+                            id: gdb
+                            on_press: screen_manager.crawler()
+                    BoxLayout:
+                        Button:
+                            text: 'G1'
+                            id: g1
+                    BoxLayout:
+                        Button:
+                            text: 'G2'
+                            id: g21
+                        Button:
+                            text: 'G2'
+                            id: g22
+                    BoxLayout:
+                        Button:
+                            text: 'G3'
+                            id: g31
+                        Button:
+                            text: 'G3'
+                            id: g32
+                        Button:
+                            text: 'G3'
+                            id: g33
+                    BoxLayout:
+                        Button:
+                            text: 'G3'
+                            id: g34
+                        Button:
+                            text: 'G3'
+                            id: g35
+                        Button:
+                            text: 'G3'
+                            id: g36
+                    BoxLayout:
+                        Button:
+                            text: 'G4'
+                            id: g41
+                        Button:
+                            text: 'G4'
+                            id: g42
+                        Button:
+                            text: 'G4'
+                            id: g43
+                        Button:
+                            text: 'G4'
+                            id: g44
+                    BoxLayout:
+                        Button:
+                            text: 'G5'
+                            id: g51
+                        Button:
+                            text: 'G5'
+                            id: g52
+                        Button:
+                            text: 'G5'
+                            id: g53
+                    BoxLayout:
+                        Button:
+                            text: 'G5'
+                            id: g54
+                        Button:
+                            text: 'G5'
+                            id: g55
+                        Button:
+                            text: 'G5'
+                            id: g56
+                    BoxLayout:
+                        Button:
+                            text: 'G6'
+                            id: g61
+                        Button:
+                            text: 'G6'
+                            id: g62
+                        Button:
+                            text: 'G6'
+                            id: g63
+                    BoxLayout:
+                        Button:
+                            text: 'G7'
+                            id: g71
+                        Button:
+                            text: 'G7'
+                            id: g72
+                        Button:
+                            text: 'G7'
+                            id: g73
+                        Button:
+                            text: 'G7'
+                            id: g74
+            BoxLayout:
+                size_hint: 1, 0.1
+                Button:
+                    text: 'show'
+                    on_press: screen_manager.print_forward()
+                Button:
+                    text: 'back'
+                    on_press: screen_manager.print_backward()
+                Button:
+                    text: 'play'
+                    on_release: screen_manager.current = 'second'
+
+    Screen:
+        name: 'second'
+        GridLayout:
+            cols: 2
+            Button:
+                text: 'gan'
+                on_press: screen_manager.current = 'gan'
+            Button:
+                text: 'max'
+                on_press: screen_manager.current = 'max'
+            Button:
+                text: 'four'
+                on_press: screen_manager.current = 'four'
+            Button:
+                text: 'top'
+                on_press: screen_manager.current = 'top'
+            Button:
+                text: 'topup'
+                on_press: screen_manager.current = 'topup'
+            Button:
+                text: 'topdown'
+                on_press: screen_manager.current = 'topdown'
+            Button:
+                text: 'twin'
+                on_press: screen_manager.current = 'twin'
+            Button:
+                text: 'zero'
+                on_press: screen_manager.current = 'zero'
+            Button:
+                text: 'back'
+                on_press: screen_manager.current = 'main'
+            Button:
+                text: 'back'
+                on_press: screen_manager.current = 'main'
+            Button:
+                text: 'back'
+                on_press: screen_manager.current = 'main'
+            Button:
+                text: 'back'
+                on_press: screen_manager.current = 'main'
+    Screen:
+        name: 'gan'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'GAN'
+                pos_hint: {'top':1}
+                size_hint: 1, 0.1
+            TextInput:
+                id:ganinput
+            BoxLayout:
+                size_hint: 1, 0.1
+                Button:
+                    text: 'show'
+                    on_press: screen_manager.showgan()
+                Button:
+                    text: 'back'
+                    on_press: screen_manager.current = 'second'
+    Screen:
+        name: 'max'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'MAX'
+                pos_hint: {'top':1}
+                size_hint: 1, 0.1
+            TextInput:
+                id:maxinput
+            BoxLayout:
+                size_hint: 1, 0.1
+                Button:
+                    text: 'show'
+                    on_press: screen_manager.showmax()
+                Button:
+                    text: 'back'
+                    on_press: screen_manager.current = 'second'
+    Screen:
+        name: 'four'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'FOUR'
+                pos_hint: {'top':1}
+                size_hint: 1, 0.1
+            TextInput:
+                id:fourinput
+            BoxLayout:
+                size_hint: 1, 0.1
+                Button:
+                    text: 'show'
+                    on_press: screen_manager.showfour()
+                Button:
+                    text: 'back'
+                    on_press: screen_manager.current = 'second'
+    Screen:
+        name: 'top'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'TOP'
+                pos_hint: {'top':1}
+                size_hint: 1, 0.1
+            TextInput:
+                id:topinput
+            BoxLayout:
+                size_hint: 1, 0.1
+                Button:
+                    text: 'show'
+                    on_press: screen_manager.showtop()
+                Button:
+                    text: 'back'
+                    on_press: screen_manager.current = 'second'
+
+    Screen:
+        name: 'topup'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'TOP UP'
+                pos_hint: {'top':1}
+                size_hint: 1, 0.1
+            TextInput:
+                id:topupinput
+            BoxLayout:
+                size_hint: 1, 0.1
+                Button:
+                    text: 'show'
+                    on_press: screen_manager.showtopup()
+                Button:
+                    text: 'back'
+                    on_press: screen_manager.current = 'second'
+    Screen:
+        name: 'topdown'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'TOP DOWN'
+                pos_hint: {'top':1}
+                size_hint: 1, 0.1
+            TextInput:
+                id:topdowninput
+            BoxLayout:
+                size_hint: 1, 0.1
+                Button:
+                    text: 'show'
+                    on_press: screen_manager.showtopdown()
+                Button:
+                    text: 'back'
+                    on_press: screen_manager.current = 'second'
+
+    Screen:
+        name: 'twin'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'TWIN'
+                pos_hint: {'top':1}
+                size_hint: 1, 0.1
+            TextInput:
+                id: twininput
+            BoxLayout:
+                size_hint: 1, 0.1
+                Button:
+                    text: 'show'
+                    on_press: screen_manager.showtwin()
+                Button:
+                    text: 'back'
+                    on_press: screen_manager.current = 'second'
+
+    Screen:
+        name: 'zero'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'ZERO'
+                pos_hint: {'top':1}
+                size_hint: 1, 0.1
+            TextInput:
+                id: zeroinput
+            BoxLayout:
+                size_hint: 1, 0.1
+                Button:
+                    text: 'show'
+                    on_press: screen_manager.showzero()
+                Button:
+                    text: 'back'
+                    on_press: screen_manager.current = 'second'
